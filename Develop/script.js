@@ -1,9 +1,9 @@
 
 // get the password input lenght function:
 function getPassLenght() {
-  var pass_length = prompt("How many caracters do you like to have in the new password? Enter a valid number between 8 and 128");
+  var pass_length = prompt("How many caracters would you like to have in the new password? Enter a valid number between 8 and 128");
   if (pass_length < 8 || pass_length > 128) {
-    alert("Error, enter a valid number (your password need at least 8 caracters)");
+    alert("Error, enter a valid number between 8 and 128");
     return -1;
   } else {
     return parseInt(pass_length);
@@ -23,26 +23,26 @@ function getCharSets() {
   var charSets = [];
 
   //prompt user window asking the user which type of character they want
-  var useLowercase = confirm("What type of character do you want: lowercase?");
+  var useLowercase = confirm("Would you like to use lowercase characters?", "Yes", "No");
   if (useLowercase) {
     charSets.push(lowercase);
   }
-  var useUppercase = confirm("What type of character do you want: uppercase?");
+  var useUppercase = confirm("Would you like to use uppercase characters?");
   if (useUppercase) {
     charSets.push(uppercase)
   }
-  var useNumeric = confirm("What type of character do you want: user_numeric?");
+  var useNumeric = confirm("Would you like to use numeric characters?");
   if (useNumeric) {
     charSets.push(numeric);
   }
-  var useSpecialcharacter = confirm("What type of character do you want: user_specialcharacter?");
+  var useSpecialcharacter = confirm("Would you like to use special characters?");
   if (useSpecialcharacter) {
     charSets.push(specialcharacter);
   }
 
   //validate if the user select at least one group of character
   if (charSets.length < 1) {
-    alert("Error you have to select at least one type of character");
+    alert("Error, you have to select at least one character group");
   }
   return charSets;
 }
