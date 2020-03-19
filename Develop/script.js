@@ -11,10 +11,48 @@ function getPassLenght() {
 
 //function get the character types to include in the password:
 function getCharactersTypes() {
+
+  //creating the character types
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var uppercase = lowercase.toUpperCase();
   var numeric = "0123456789";
   var specialcharacter = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+
+  //empty array
+  var charSets = [];
+
+  //prompt user window asking the user which type of character they want
+  var useLowercase = prompt("What type of character do you want: lowercase?");
+  if (useLowercase) {
+    charSets.push(lowercase);
+  }
+  var useUppercase = prompt("What type of character do you want: uppercase?");
+  if (useUppercase) {
+    charSets.push(uppercase)
+  }
+  var useNumeric = prompt("What type of character do you want: user_numeric?");
+  if (useNumeric) {
+    charSets.push(numeric);
+  }
+  var useSpecialcharacter = prompt("What type of character do you want: user_specialcharacter?");
+  if (useSpecialcharacter) {
+    charSets.push(specialcharacter);
+  }
+
+
+
+  var countUserInputTotal = 0;
+  countUserInputTotal = user_lowercasecount + user_uppercasecount + user_numericcount + user_specialcharactercount;
+
+  //var countUserInputTotal
+  if (countUserInputTotal < 1) {
+    confirm("Error you have to select at least one type of character");
+  } else {
+
+
+  }
+
+
 
 }
 
