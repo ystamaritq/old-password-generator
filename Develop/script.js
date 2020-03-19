@@ -10,8 +10,12 @@ function getPassLenght() {
 }
 
 //function get the character types to include in the password:
-function getCharactersTypes(){
-  
+function getCharactersTypes() {
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
+  var uppercase = lowercase.toUpperCase();
+  var numeric = "0123456789";
+  var specialcharacter = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+
 }
 
 
