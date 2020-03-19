@@ -1,10 +1,28 @@
 
+// get the password input lenght function:
+function getPassLenght() {
+  var pass_length = prompt("How many caracters do you like to have in the new password? Enter a valid number between 8 and 128");
+  if (pass_length < 8 || pass_length > 128) {
+    confirm("Error, enter a valid number (your password need at least 8 caracters)");
+  } else {
+    return pass_length;
+  }
+}
+
+//function get the character types to include in the password:
+function getCharactersTypes(){
+  
+}
+
+
+
+
+
+
+
 //function generate password
 function generatePassword() {
-  var pass_length = prompt("How many caracters do you like to have in the new password? Enter a valid number between 8 and 128");
-  if (pass_length < 8) {
-    confirm("Error, enter a valid number");
-  }
+  return getPassLenght();
 }
 
 
