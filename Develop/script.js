@@ -6,7 +6,7 @@ function getPassLenght() {
     alert("Error, enter a valid number (your password need at least 8 caracters)");
     return -1;
   } else {
-    return pass_length;
+    return parseInt(pass_length);
   }
 }
 
@@ -47,13 +47,14 @@ function getCharSets() {
   return charSets;
 }
 
+
 //function generate password
 function generatePassword() {
 
   //variables
-  var lenght = getPassLenght();
+  var passLength = getPassLenght();
 
-  if (lenght < 1)
+  if (passLength < 1)
     return "";
 
   var charSets = getCharSets();
@@ -64,11 +65,14 @@ function generatePassword() {
   var newPassword = '';
 
   //for loop to generate the new password
-  for (var i = 0; i < length; i++) {
-    var charSetIndex = i % charSets.lenght;
+  debugger
+  for (var i = 0; i < passLength; i++) {
+
+    var charSetIndex = i % charSets.length;
     var charSet = charSets[charSetIndex];
-    var randomIndex = 0; //generate random index
-    newPassword += charSet.charAt[randomIndex]; ///characterTypesSelected.charAt((Math.floor(Math.random)) * characterTypesSelected.length);
+    var randomIndex = Math.floor(Math.random() * charSet.length);
+
+    newPassword += charSet.charAt(randomIndex);
   }
   return newPassword;
 }
