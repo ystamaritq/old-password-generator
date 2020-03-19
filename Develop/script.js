@@ -65,7 +65,6 @@ function generatePassword() {
   var newPassword = '';
 
   //for loop to generate the new password
-  debugger
   for (var i = 0; i < passLength; i++) {
 
     var charSetIndex = i % charSets.length;
